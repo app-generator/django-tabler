@@ -15,12 +15,17 @@
         {% csrf_token %}
 
         <div class="card-body p-6">
-          <div class="card-title">
+
+          <div class="card-title text-center">
 
             {% if msg %}
               {{ msg | safe }}
             {% else %}
-              Login to your account
+              Use default credentials: 
+              <br />
+              <strong>test / ApS12_ZZs8</strong>
+              <br />
+              OR <a href={% url 'register' %} >create your own user</a>
             {% endif %}  
             
           </div>
