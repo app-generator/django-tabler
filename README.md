@@ -8,7 +8,7 @@
 - Modular design
 - Session-Based Authentication (login, register)
 - Forms validation
-- UI Kit: **Tabler Dashboard** (Free Version) by **FlatLogic**
+- UI Kit: **Tabler Dashboard** (Free Version) by **CodeCalm**
 
 ### Deployment Scripts
 
