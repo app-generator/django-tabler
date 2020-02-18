@@ -21,6 +21,7 @@
 
 - [Django Dashboard Tabler](https://appseed.us/admin-dashboards/django-dashboard-tabler) - product page
 - [Django Dashboard Tabler](https://django-dashboard-tabler.appseed.us) - LIVE Demo
+- [Django Dashboard Tabler](https://www.youtube.com/watch?v=AeCjWoWLVvE) - yTube presentation
 
 <br />
 
@@ -183,7 +184,6 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 ## Credits
 
-- [Django Dashboard Tabler](https://www.youtube.com/watch?v=AeCjWoWLVvE) - yTube presentation
 - [Django Framework](https://www.djangoproject.com/) - Offcial website
 - [Django Admin Dashboards](https://appseed.us/admin-dashboards/django) - Open-source and paid admin panels coded in **Django**
 
