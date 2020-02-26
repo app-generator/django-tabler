@@ -2,7 +2,7 @@
 
 **Open-Source Admin Dashboard** coded in **[Django Framework](https://www.djangoproject.com/)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
 
-### Dashboard Features
+## Dashboard Features
 
 - SQLite, Django native ORM
 - Modular design
@@ -10,28 +10,28 @@
 - Forms validation
 - UI Kit: **Tabler Dashboard** (Free Version) by **CodeCalm**
 
-### Deployment Scripts
+## Deployment Scripts
 
 - **Heroku** - Cloud Application Platform
 - **Docker** - execute the app using a sandboxed container
 - **Gunicorn** / Nginx
 - **Waitress** - Gunicorn equivalent for Windows.
 
-### Web App Links
+## Web App Links
 
 - [Django Dashboard Tabler](https://appseed.us/admin-dashboards/django-dashboard-tabler) - product page
 - [Django Dashboard Tabler](https://django-dashboard-tabler.appseed.us) - LIVE Demo
-- [Django Dashboard Tabler](https://www.youtube.com/watch?v=AeCjWoWLVvE) - yTube presentation
+- [Django Dashboard Tabler](https://docs.appseed.us/admin-dashboards/django-dashboard-tabler/) - Docs
 
 <br />
 
-## Want more? Go PRO
+## Want more? Go PRO!
 
 PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup)) 
 
-| [Django Dashboard Argon PRO](https://appseed.us/admin-dashboards/django-dashboard-argon-pro) | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [Django Dashboard Dashkit PRO](https://appseed.us/admin-dashboards/django-dashboard-dashkit-pro) |
+| [Premium Django Dashboards](https://appseed.us/bundles/django-admin-dashboards-pro) | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [Django Dashboard Dashkit PRO](https://appseed.us/admin-dashboards/django-dashboard-dashkit-pro) |
 | --- | --- | --- |
-| [![Django Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-argon-pro)  | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django Dashboard Dashkit PRO](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-dashkit-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-dashkit-pro)
+| [![Premium Django Dashboards - Provided by AppSeed.](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-material-pro-screen.png)](https://appseed.us/bundles/django-admin-dashboards-pro)  | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django Dashboard Dashkit PRO](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-dashkit-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-dashkit-pro)
 
 <br />
 <br />
