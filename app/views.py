@@ -9,10 +9,35 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
+from app.forms import Form_cad_empresa,Form_cad_setores
 
 @login_required(login_url="/login/")
 def index(request):
     return render(request, "index.html")
+    
+@login_required(login_url="/login/")
+def cadastro_setores(request):
+    data = {}
+    data['form'] = Form_cad_setores()
+    return render(request,"cadastro-setores.html",data)
+
+@login_required(login_url="/login/")
+def cadastro_equipes(request):
+    return render(request,"cadastro-equipes.html")
+
+@login_required(login_url="/login/")
+def cadastro_fornecedores(request):
+    return render(request,"cadastro-fornecedores.html")
+
+@login_required(login_url="/login/")
+def cadastro_dpo(request):
+    return render(request,"cadastro-dpo.html")
+
+@login_required(login_url="/login/")
+def cadastro_empresa(request):
+    data = {}
+    data['form'] = Form_cad_empresa()
+    return render(request,"cadastro-empresa.html",data)
 
 @login_required(login_url="/login/")
 def pages(request):

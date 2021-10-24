@@ -13,4 +13,9 @@ urlpatterns = [
 
     # The home page
     path('', views.index, name='home'),
+    path('cadastro_setores/',views.cadastro_setores, name='cadastro_setores'),
+    path('cadastro_equipes/',views.cadastro_equipes, name='cadastro_equipes'),
+    path('cadastro_fornecedores/',views.cadastro_fornecedores, name='cadastro_fornecedores'),
+    path('cadastro_dpo/',views.cadastro_dpo, name='cadastro_dpo'),
+    path('cadastro_empresa/',views.cadastro_empresa, name='cadastro_empresa')
 ]

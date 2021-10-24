@@ -27,11 +27,12 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'widget_tweaks',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'  # Enable the inner app 
+    'app',  # Enable the inner app 
 ]
 
 MIDDLEWARE = [
