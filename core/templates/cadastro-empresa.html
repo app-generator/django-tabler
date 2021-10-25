@@ -7,38 +7,37 @@
                 Informações da Empresa
             </h1>
         </div>
-        <form name="form" id="form" action="/create/" method="post ">
+        <form name="form" id="form" action="/create/" method="post">
             <fieldset class="form-fieldset ">
-
+                {% csrf_token %}
+                <label class="form-label ">Nome da Empresa<span class="form-required ">*</span></label>{% render_field form.nome_fantasia_empresa class="form-control" placeholder="Nome da Empresa" type="text" %}
                 <div class=" form-group ">
-                    <label class="form-label ">Nome da Empresa<span class="form-required ">*</span></label>{% render_field form.nome_fantasia_empresa class="form-control " placeholder="Nome da Empresa " type="text " %}
-                    <div class=" form-group ">
-                        <label class="form-label ">CNPJ<span class="form-required ">*</span></label>{% render_field form.cnpj_empresa class="form-control " placeholder="00.000.000/0000-00 " type="text " name="cpfcnpj " %}
-                        <div class="form-group ">
-                            <label class="form-label ">Endereço<span class="form-required ">*</span></label>{% render_field form.endereco_empresa class="form-control " type="text " %}
-                        </div>
-                        <div class="form-group ">
-                            <label class="form-label ">Cidade<span class="form-required ">*</span></label>{% render_field form.cidade_empresa class="form-control " type="text " %}
-                        </div>
-                        <div class="form-group ">
-                            <label class="form-label ">CEP<span class="form-required ">*</span></label>{% render_field form.cep_empresa class="form-control " type="text " %}
-                        </div>
-                        <div class="form-group ">
-                            <label class="form-label ">Estado<span class="form-required ">*</span></label>{% render_field form.estado_empresa class="form-control " type="text " %}
-                        </div>
-                        <div class="form-group ">
-                            <label class="form-label ">Telefone<span class="form-required ">*</span></label>{% render_field form.telefone_empresa class="form-control " placeholder="(00) 00000-0000 " type="text " %}
-                        </div>
-                        <div class="form-group mb-0 text-right ">
-                            <input type="submit" class="btn btn-primary" value=" Salvar ">
-                        </div>
+                    <label class="form-label ">CNPJ<span class="form-required ">*</span></label>{% render_field form.cnpj_empresa class="form-control " placeholder="00.000.000/0000-00 " type="text" %}
+                    <div class="form-group ">
+                        <label class="form-label ">Endereço<span class="form-required ">*</span></label>{% render_field form.endereco_empresa class="form-control " type="text " %}
                     </div>
+                    <div class="form-group ">
+                        <label class="form-label ">Cidade<span class="form-required ">*</span></label>{% render_field form.cidade_empresa class="form-control " type="text " %}
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label ">CEP<span class="form-required ">*</span></label>{% render_field form.cep_empresa class="form-control " type="text " %}
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label ">Estado<span class="form-required ">*</span></label>{% render_field form.estado_empresa class="form-control " type="text " %}
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label ">Telefone<span class="form-required ">*</span></label>{% render_field form.telefone_empresa class="form-control " placeholder="(00) 00000-0000 " type="text " %}
+                    </div>
+                    <div class="form-group mb-0 text-right ">
+                        <input type="submit" class="btn btn-primary" value=" Salvar ">
+                    </div>
+                </div>
             </fieldset>
         </form>
-        </div>
     </div>
+</div>
 
-    {% endblock content %}
+{% endblock content %}
 
-    <!-- Specific Page JS goes HERE  -->
-    {% block javascripts %}{% endblock javascripts %}
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

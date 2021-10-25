@@ -46,6 +46,9 @@ def create(request):
     if form.is_valid():
         form.save()
         return redirect('cadastro_empresa')
+    else:
+        print("O ERRRO COMEÇA AQUI")
+        print(form)
 
 
 @login_required(login_url="/login/")
