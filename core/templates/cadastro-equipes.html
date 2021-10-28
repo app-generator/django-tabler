@@ -1,14 +1,58 @@
 {% extends "layouts/base.html" %} {% block title %} Cadastro de Equipes {% endblock %} {% block content %}
 
+
 <div class="my-3 my-md-5">
     <div class="container">
 
         <div class="page-header">
             <h1 class="page-title">
-                Add Content Here
+                Membros da Equipe
             </h1>
         </div>
+        <form name="form" id="form" action="/create/" method="post">
+            <fieldset class="form-fieldset ">
+                {% csrf_token %}
+                <div class="table-responsive">
 
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Cargo</th>
+                                <th scope="col">Responsabilidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+            </fieldset>
+            </div>
+        </form>
     </div>
 </div>
 

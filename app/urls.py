@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.urls import path, re_path
-from app.views import index, cadastro_setores,cadastro_equipes,cadastro_fornecedores,cadastro_dpo,cadastro_empresa,create
+from app.views import index, cadastro_setores,cadastro_equipes,cadastro_fornecedores,cadastro_dpo,cadastro_empresa,create, dados_previos
 
 urlpatterns = [
     # Matches any html file 
@@ -18,5 +18,6 @@ urlpatterns = [
     path('cadastro_fornecedores/',cadastro_fornecedores, name='cadastro_fornecedores'),
     path('cadastro_dpo/',cadastro_dpo, name='cadastro_dpo'),
     path('cadastro_empresa/',cadastro_empresa, name='cadastro_empresa'),
-    path('create/', create, name='create')
+    path('create/', create, name='create'),
+    path('dados_previos/',dados_previos, name='dados_previos'),
 ]

@@ -1,11 +1,12 @@
-{% extends "layouts/base.html" %} {% block title %} Cadastro de Setores {% endblock %} {% block content %}
+{% extends "layouts/base.html" %} {% block title %} Dados Prévios {% endblock %} {% block content %}
+
 
 <div class="my-3 my-md-5">
     <div class="container">
 
         <div class="page-header">
             <h1 class="page-title">
-                Setores
+                Dados Prévios
             </h1>
         </div>
         <form name="form" id="form" action="/create/" method="post">
@@ -17,23 +18,20 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Telefone</th>
-                                <th scope="col">Responsável</th>
+                                <th scope="col">Pergunta</th>
+                                <th scope="col">Resposta</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <td>Possui Página(s) Web</td>
+                                <td>sim</td>
                             </tr>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">2</th>
+                                <td>Possui E-mail Externo</td>
+                                <td>não</td>
                             </tr>
                         </tbody>
                     </table>

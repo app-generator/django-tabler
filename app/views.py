@@ -18,9 +18,10 @@ def index(request):
     
 @login_required(login_url="/login/")
 def cadastro_setores(request):
-    data = {}
-    data['form'] = Form_cad_setores()
-    return render(request,"cadastro-setores.html",data)
+    #data = {}
+    #data['form'] = Form_cad_setores()
+    #return render(request,"cadastro-setores.html",data)
+    return render(request,"cadastro-setores.html")
 
 @login_required(login_url="/login/")
 def cadastro_equipes(request):
@@ -46,10 +47,11 @@ def create(request):
     if form.is_valid():
         form.save()
         return redirect('cadastro_empresa')
-    else:
-        print("O ERRRO COMEÇA AQUI")
-        print(form)
-
+    
+@login_required(login_url="/login/")
+def dados_previos(request):
+    return render(request,"dados-previos.html")
+    #return render(request,"ui-form-elements.html")
 
 @login_required(login_url="/login/")
 def pages(request):
