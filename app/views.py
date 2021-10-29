@@ -10,6 +10,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 from app.forms import Form_cad_empresa,Form_cad_setores
+from app.models import Cad_empresa, Cad_setores
 
 
 @login_required(login_url="/login/")
@@ -18,10 +19,11 @@ def index(request):
     
 @login_required(login_url="/login/")
 def cadastro_setores(request):
-    #data = {}
-    #data['form'] = Form_cad_setores()
-    #return render(request,"cadastro-setores.html",data)
-    return render(request,"cadastro-setores.html")
+    data = {}
+    data['form'] = Form_cad_setores
+    data['db'] = Cad_setores.objects.all()
+    return render(request,"cadastro-setores.html",data)
+
 
 @login_required(login_url="/login/")
 def cadastro_equipes(request):
@@ -39,6 +41,7 @@ def cadastro_dpo(request):
 def cadastro_empresa(request):
     data = {}
     data['form'] = Form_cad_empresa()
+    data['db'] = Cad_empresa.objects.all()
     return render(request,"cadastro-empresa.html",data)
 
 @login_required(login_url="/login/")

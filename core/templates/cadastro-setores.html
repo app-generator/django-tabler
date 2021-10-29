@@ -12,7 +12,6 @@
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
                 <div class="table-responsive">
-
                     <table class="table">
                         <thead>
                             <tr>
@@ -20,21 +19,20 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">Telefone</th>
                                 <th scope="col">Responsável</th>
+                                <th scope="col">Cargo</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {% for dbs in db %}
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{dbs.id}}</th>
+                                <td>{{dbs.setor_nome}}</td>
+                                <td>{{dbs.contato_setor}}</td>
+                                <td>{{dbs.resposavel_setor}}</td>
+                                <td>{{dbs.cargo_setor}}</td>
+
                             </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                     <nav aria-label="Page navigation example">
