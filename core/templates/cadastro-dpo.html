@@ -11,35 +11,50 @@
         <form name="form" id="form" action="/create/" method="post">
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
-                <label class="form-label ">Nome do DPO<span class="form-required ">*</span></label>
-                <div class=" form-group ">
-                    <label class="form-label ">CPF<span class="form-required ">*</span></label>
-                    <div class="form-group ">
-                        <label class="form-label ">Cargo<span class="form-required ">*</span></label>
-                    </div>
-                    <div class="form-group ">
-                        <label class="form-label ">Contato<span class="form-required ">*</span></label>
-                    </div>
-                    <div class="form-group ">
-                        <label class="form-label ">Empresa<span class="form-required ">*</span></label>
-                    </div>
-                    <div class="form-group ">
-                        <label class="form-label ">CNPJ<span class="form-required ">*</span></label>
-                    </div>
-                    <div class="form-group ">
-                        <label class="form-label ">Endereço<span class="form-required ">*</span></label>
-                    </div>
-                    <div class="form-group ">
-                        <label class="form-label ">Cidade<span class="form-required ">*</span></label>
-                    </div>
-                    <div class="form-group ">
-                        <label class="form-label ">Estado<span class="form-required ">*</span></label>
-                    </div>
-                    <div class="form-group mb-0 text-right ">
-                        <input type="submit" class="btn btn-primary" value=" Salvar ">
-                    </div>
-                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome do DPO</th>
+                                <th scope="col">CPF</th>
+                                <th scope="col">Cargo</th>
+                                <th scope="col">Contato</th>
+                                <th scope="col">Empresa</th>
+                                <th scope="col">CNPJ</th>
+                                <th scope="col">Endereço</th>
+                                <th scope="col">Cidade</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for dbs in db %}
+                            <tr>
+                                <th scope="row">{{dbs.id}}</th>
+                                <td>{{dbs.nome}}</td>
+                                <td>{{dbs.cpf}}</td>
+                                <td>{{dbs.cargo}}</td>
+                                <td>{{dbs.contato}}</td>
+                                <td>{{dbs.empresa}}</td>
+                                <td>{{dbs.cnpj}}</td>
+                                <td>{{dbs.endereco}}</td>
+                                <td>{{dbs.cidade}}</td>
+                                <td>{{dbs.estado}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
             </fieldset>
+            </div>
         </form>
     </div>
 </div>

@@ -25,20 +25,15 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {% for dbs in db %}
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{dbs.id}}</th>
+                                <td>{{dbs.nome}}</td>
+                                <td>{{dbs.telefone}}</td>
+                                <td>{{dbs.cargo}}</td>
+                                <td>{{dbs.responsabilidade}}</td>
                             </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                     <nav aria-label="Page navigation example">

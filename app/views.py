@@ -9,8 +9,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from app.forms import Form_cad_empresa,Form_cad_setores
-from app.models import Cad_empresa, Cad_setores
+from app.forms import Form_cad_empresa, Form_cad_equipes, Form_cad_fornecedores,Form_cad_setores,Form_cad_dpo
+from app.models import Cad_empresa, Cad_equipes, Cad_fornecedores, Cad_setores, Cad_dpo
 
 
 @login_required(login_url="/login/")
@@ -27,15 +27,24 @@ def cadastro_setores(request):
 
 @login_required(login_url="/login/")
 def cadastro_equipes(request):
-    return render(request,"cadastro-equipes.html")
+    data = {}
+    data['form'] = Form_cad_equipes
+    data['db'] = Cad_equipes.objects.all()
+    return render(request,"cadastro-equipes.html",data)
 
 @login_required(login_url="/login/")
 def cadastro_fornecedores(request):
-    return render(request,"cadastro-fornecedores.html")
+    data = {}
+    data['form'] = Form_cad_fornecedores
+    data['db'] = Cad_fornecedores.objects.all()
+    return render(request,"cadastro-fornecedores.html",data)
 
 @login_required(login_url="/login/")
 def cadastro_dpo(request):
-    return render(request,"cadastro-dpo.html")
+    data = {}
+    data['form'] = Form_cad_dpo
+    data['db'] = Cad_dpo.objects.all()
+    return render(request,"cadastro-dpo.html",data)
 
 @login_required(login_url="/login/")
 def cadastro_empresa(request):

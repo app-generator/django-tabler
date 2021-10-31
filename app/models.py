@@ -21,3 +21,25 @@ class Cad_setores(models.Model):
     resposavel_setor = models.CharField(max_length=30)
     cargo_setor = models.CharField(max_length=30)
     contato_setor = models.CharField(max_length=30)
+
+class Cad_equipes(models.Model):
+    nome = models.CharField(max_length=30)
+    telefone = models.CharField(max_length=30)
+    responsabilidade = models.CharField(max_length=30)
+
+class Cad_fornecedores(models.Model):
+    fornecedor = models.CharField(max_length=30)
+    cnpj = models.CharField(max_length=30)
+    dpo = models.CharField(max_length=30)
+    telefone = models.CharField(max_length=30)
+
+class Cad_dpo(models.Model):
+    nome = models.CharField(max_length=30)
+    cpf = models.CharField(max_length=30)
+    cargo = models.CharField(max_length=30)
+    contato = models.CharField(max_length=30)
+    empresa = models.CharField(max_length=30)
+    cnpj = models.CharField(max_length=30)
+    endereco = models.CharField(max_length=30)
+    cidade = models.CharField(max_length=30)
+    estado = models.CharField(max_length=30)
