@@ -9,8 +9,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
-from app.forms import Form_cad_empresa, Form_cad_equipes, Form_cad_fornecedores,Form_cad_setores,Form_cad_dpo
-from app.models import Cad_empresa, Cad_equipes, Cad_fornecedores, Cad_setores, Cad_dpo
+from app.forms import Form_cad_empresa, Form_cad_equipes, Form_cad_fornecedores,Form_cad_setores,Form_cad_dpo,Form_dados_previos, Form_fator_de_risco,Form_itens_auditaveis,Form_mapeamento
+from app.models import Cad_dados_previos, Cad_empresa, Cad_equipes, Cad_fator_de_risco, Cad_fornecedores, Cad_setores, Cad_dpo, Cad_itens_auditaveis,Cad_Mapeamento
 
 
 @login_required(login_url="/login/")
@@ -19,10 +19,10 @@ def index(request):
     
 @login_required(login_url="/login/")
 def cadastro_setores(request):
-    data = {}
-    data['form'] = Form_cad_setores
-    data['db'] = Cad_setores.objects.all()
-    return render(request,"cadastro-setores.html",data)
+        data = {}
+        data['form'] = Form_cad_setores
+        data['db'] = Cad_setores.objects.all()
+        return render(request,"cadastro-setores.html",data)
 
 
 @login_required(login_url="/login/")
@@ -62,26 +62,28 @@ def create(request):
     
 @login_required(login_url="/login/")
 def dados_previos(request):
-    return render(request,"dados-previos.html")
-    #return render(request,"ui-form-elements.html")
+    data = {}
+    data['form'] = Form_dados_previos
+    data['db'] = Cad_dados_previos.objects.all()
+    return render(request,"dados-previos.html",data)
 
 @login_required(login_url="/login/")
-def pages(request):
-    context = {}
-    # All resource paths end in .html.
-    # Pick out the html file name from the url. And load that template.
-    try:
-        
-        load_template = request.path.split('/')[-1]
-        html_template = loader.get_template( load_template )
-        return HttpResponse(html_template.render(context, request))
-        
-    except template.TemplateDoesNotExist:
+def itens_auditaveis(request):
+    data = {}
+    data['form'] = Form_itens_auditaveis
+    data['db'] = Cad_itens_auditaveis.objects.all()
+    return render(request,"itens-auditaveis.html",data)
 
-        html_template = loader.get_template( 'error-404.html' )
-        return HttpResponse(html_template.render(context, request))
+@login_required(login_url="/login/")
+def fator_de_risco(request):
+    data = {}
+    data['form'] = Form_fator_de_risco
+    data['db'] = Cad_fator_de_risco.objects.all()
+    return render(request,"fator-de-risco.html",data)
 
-    except:
-    
-        html_template = loader.get_template( 'error-500.html' )
-        return HttpResponse(html_template.render(context, request))
+@login_required(login_url="/login/")
+def mapeamento(request):
+    data = {}
+    data['form'] = Form_mapeamento
+    data['db'] = Cad_Mapeamento.objects.all()
+    return render(request,"mapeamento.html",data)

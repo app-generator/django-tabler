@@ -7,6 +7,7 @@ Copyright (c) 2019 - present AppSeed.us
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Cad_empresa(models.Model):
     nome_fantasia_empresa = models.CharField(max_length=80)
     cnpj_empresa = models.CharField(max_length=18)
@@ -43,3 +44,21 @@ class Cad_dpo(models.Model):
     endereco = models.CharField(max_length=30)
     cidade = models.CharField(max_length=30)
     estado = models.CharField(max_length=30)
+
+class Cad_dados_previos(models.Model):
+    questao_dados_previos = models.CharField(max_length=90)
+    resposta = models.CharField(max_length=10)
+
+class Cad_itens_auditaveis(models.Model):
+    questao_itens_auditaveis = models.CharField(max_length=90)
+    il = models.IntegerField()
+    icn = models.IntegerField()
+    e = models.IntegerField()
+
+class Cad_fator_de_risco(models.Model):
+    #questao_id = models.ForeignKey(Cad_itens_auditaveis.pk)
+    questao_fator_de_risco = models.CharField(max_length=90)
+    fator_de_risco = models.IntegerField()
+
+class Cad_Mapeamento(models.Model):
+    pass

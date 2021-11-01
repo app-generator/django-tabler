@@ -1,4 +1,4 @@
-{% extends "layouts/base.html" %} {% block title %} Dados Prévios {% endblock %} {% block content %}
+{% extends "layouts/base.html" %} {% block title %} Fator de Risco {% endblock %} {% block content %}
 
 
 <div class="my-3 my-md-5">
@@ -6,7 +6,7 @@
 
         <div class="page-header">
             <h1 class="page-title">
-                Dados Prévios
+                Fator de Risco
             </h1>
         </div>
         <form name="form" id="form" action="/create/" method="post">
@@ -19,7 +19,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Questão</th>
-                                <th scope="col">Resposta</th>
+                                <th scope="col">Fator de Risco</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,7 +27,7 @@
                             <tr>
                                 <th scope="row">1</th>
                                 <td>{{dbs.questao}}</td>
-                                <td>{{dbs.resposta}}</td>
+                                <td>{{dbs.fator_de_risco}}</td>
                             </tr>
                             {% endfor %}
                         </tbody>

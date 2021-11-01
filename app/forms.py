@@ -1,7 +1,7 @@
 from django.db.models import fields
 from django.forms import ModelForm,forms
 from django.db import models
-from app.models import Cad_empresa,Cad_setores,Cad_fornecedores,Cad_equipes,Cad_dpo
+from app.models import Cad_dados_previos, Cad_empresa, Cad_fator_de_risco, Cad_itens_auditaveis,Cad_setores,Cad_fornecedores,Cad_equipes,Cad_dpo,Mapeamento
 
 
 class Form_cad_empresa(ModelForm):
@@ -28,4 +28,24 @@ class Form_cad_equipes(ModelForm):
 class Form_cad_dpo(ModelForm):
     class Meta:
         models = Cad_dpo
+        fields = "__all__"
+
+class Form_dados_previos(ModelForm):
+    class Meta:
+        models = Cad_dados_previos
+        fields = "__all__"
+
+class Form_itens_auditaveis(ModelForm):
+    class Meta:
+        models = Cad_itens_auditaveis
+        fields = "__all__"
+
+class Form_fator_de_risco(ModelForm):
+    class Meta:
+        models = Cad_fator_de_risco
+        fields = "__all__"
+
+class Form_mapeamento(ModelForm):
+    class Meta:
+        models = Mapeamento
         fields = "__all__"
