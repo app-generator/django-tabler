@@ -18,16 +18,20 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Questão</th>
-                                <th scope="col">Resposta</th>
+                                <th scope="col">Dado</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Fonte</th>
+                                <th scope="col">Base Legal</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for dbs in db %}
                             <tr>
                                 <th scope="row">1</th>
-                                <td>{{dbs.questao}}</td>
-                                <td>{{dbs.resposta}}</td>
+                                <td>{{dbs.dado}}</td>
+                                <td>{{dbs.tipo}}</td>
+                                <td>{{dbs.fonte}}</td>
+                                <td>{{dbs.base_legal}}</td>
                             </tr>
                             {% endfor %}
                         </tbody>

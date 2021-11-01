@@ -1,7 +1,7 @@
 from django.db.models import fields
 from django.forms import ModelForm,forms
 from django.db import models
-from app.models import Cad_dados_previos, Cad_empresa, Cad_fator_de_risco, Cad_itens_auditaveis,Cad_setores,Cad_fornecedores,Cad_equipes,Cad_dpo,Mapeamento
+from app.models import Cad_dados_previos, Cad_empresa, Cad_fator_de_risco, Cad_itens_auditaveis,Cad_setores,Cad_fornecedores,Cad_equipes,Cad_dpo,Cad_Mapeamento
 
 
 class Form_cad_empresa(ModelForm):
@@ -47,5 +47,5 @@ class Form_fator_de_risco(ModelForm):
 
 class Form_mapeamento(ModelForm):
     class Meta:
-        models = Mapeamento
+        models = Cad_Mapeamento
         fields = "__all__"

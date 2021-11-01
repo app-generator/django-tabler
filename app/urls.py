@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.urls import path, re_path
-from app.views import index, cadastro_setores,cadastro_equipes,cadastro_fornecedores,cadastro_dpo,cadastro_empresa,create, dados_previos, itens_auditaveis,fator_de_risco,mapeamento
+from app.views import index, cadastro_setores,cadastro_equipes,cadastro_fornecedores,cadastro_dpo,cadastro_empresa,create, dados_previos, itens_auditaveis,fator_de_risco,mapeamento,documentos,treinamento,relatorio
 
 urlpatterns = [
     # Matches any html file 
@@ -22,5 +22,8 @@ urlpatterns = [
     path('dados_previos/',dados_previos, name='dados_previos'),
     path('itens_auditaveis/',itens_auditaveis, name='itens_auditaveis'),
     path('fator_de_risco/',fator_de_risco, name='fator_de_risco'),
+    path('relatorio/',relatorio, name='relatorio'),
     path('mapeamento/',mapeamento, name='mapeamento'),
+    path('documentos/',documentos, name='documentos'),
+    path('treinamento/',treinamento, name='treinamento'),
 ]

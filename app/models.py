@@ -61,4 +61,16 @@ class Cad_fator_de_risco(models.Model):
     fator_de_risco = models.IntegerField()
 
 class Cad_Mapeamento(models.Model):
-    pass
+    dado = models.CharField(max_length=30)
+    tipo = models.CharField(max_length=30)
+    fonte = models.CharField(max_length=30)
+    motivo = models.CharField(max_length=30)
+    base_legal = models.CharField(max_length=30)
+    tratamento = models.CharField(max_length=30)
+    eliminacao = models.CharField(max_length=30)
+    compartilhamento = models.CharField(max_length=30)
+    necessario_consentimento = models.CharField(max_length=30)
+    possui_consentimento = models.CharField(max_length=30)
+    menor = models.CharField(max_length=30)
+    impacto_pessoal = models.CharField(max_length=30)
+    missao_critica = models.CharField(max_length=30)

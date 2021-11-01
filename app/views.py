@@ -82,8 +82,29 @@ def fator_de_risco(request):
     return render(request,"fator-de-risco.html",data)
 
 @login_required(login_url="/login/")
+def relatorio(request):
+    #data = {}
+    #data['form'] = Form_fator_de_risco
+    #data['db'] = Cad_fator_de_risco.objects.all()
+    return render(request,"relatorio.html")
+
+@login_required(login_url="/login/")
 def mapeamento(request):
     data = {}
     data['form'] = Form_mapeamento
     data['db'] = Cad_Mapeamento.objects.all()
     return render(request,"mapeamento.html",data)
+
+@login_required(login_url="/login/")
+def documentos(request):
+    #data = {}
+    #data['form'] = Form_documentos
+    #data['db'] = Cad_Mapeamento.objects.all()
+    return render(request,"documentos.html")
+
+@login_required(login_url="/login/")
+def treinamento(request):
+    #data = {}
+    #data['form'] = Form_documentos
+    #data['db'] = Cad_Mapeamento.objects.all()
+    return render(request,"treinamento.html")
