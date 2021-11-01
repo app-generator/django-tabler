@@ -4,13 +4,10 @@ License: MIT
 Copyright (c) 2019 - present AppSeed.us
 """
 
-from django.urls import path, re_path
+from django.urls import path
 from app.views import index, cadastro_setores,cadastro_equipes,cadastro_fornecedores,cadastro_dpo,cadastro_empresa,create, dados_previos, itens_auditaveis,fator_de_risco,mapeamento,documentos,treinamento,relatorio
 
 urlpatterns = [
-    # Matches any html file 
-    #re_path(r'^.*\.html', views.pages, name='pages'),
-
     # The home page
     path('', index, name='home'),
     path('cadastro_setores/',cadastro_setores, name='cadastro_setores'),

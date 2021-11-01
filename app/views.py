@@ -5,10 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404, redirect
-from django.template import loader
-from django.http import HttpResponse
-from django import template
+from django.shortcuts import render, redirect
 from app.forms import Form_cad_empresa, Form_cad_equipes, Form_cad_fornecedores,Form_cad_setores,Form_cad_dpo,Form_dados_previos, Form_fator_de_risco,Form_itens_auditaveis,Form_mapeamento
 from app.models import Cad_dados_previos, Cad_empresa, Cad_equipes, Cad_fator_de_risco, Cad_fornecedores, Cad_setores, Cad_dpo, Cad_itens_auditaveis,Cad_Mapeamento
 
