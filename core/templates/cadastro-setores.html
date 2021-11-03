@@ -1,5 +1,4 @@
 {% extends "layouts/base.html" %} {% block title %} Cadastro de Setores {% endblock %} {% block content %}
-
 <div class="my-3 my-md-5">
     <div class="container">
 
@@ -7,6 +6,9 @@
             <h1 class="page-title">
                 Setores
             </h1>
+        </div>
+        <div class="col-8 m-auto pt-3 pb-2 text-center">
+            <a href="/cadastrar_setor" class="btn btn-success">Adicionar</a>
         </div>
         <form name="form" id="form" action="/create/" method="post">
             <fieldset class="form-fieldset ">
@@ -20,6 +22,7 @@
                                 <th scope="col">Telefone</th>
                                 <th scope="col">Responsável</th>
                                 <th scope="col">Cargo</th>
+                                <th scope="col">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,12 +33,17 @@
                                 <td>{{dbs.contato_setor}}</td>
                                 <td>{{dbs.resposavel_setor}}</td>
                                 <td>{{dbs.cargo_setor}}</td>
+                                <td>
+
+                                    <a href="/edit/{{dbs.id}}/" class="btn btn-dark ">Editar</a>
+                                    <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                                </td>
 
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
-                    <nav aria-label="Page navigation example">
+                    <!--<nav aria-label="Page navigation example">
                         <ul class="pagination">
                             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -43,14 +51,32 @@
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item"><a class="page-link" href="#">Next</a></li>
                         </ul>
-                    </nav>
+                    </nav>-->
             </fieldset>
             </div>
         </form>
     </div>
 </div>
-
 {% endblock content %}
-
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+
+
+{% block javascripts %}
+<script>
+    (function(win, doc) {
+        'use strict';
+        //verifica se user realmente quer apagar o carro
+        if (doc.querySelector('.btnDel')) {
+            let btnDel = doc.querySelectorAll('.btnDel');
+            for (let i = 0; i < btnDel.length; i++) {
+                btnDel[i].addEventListener('click', function(event) {
+                    if (confirm('Deseja mesmo apagar este setor?')) {
+                        return true;
+                    } else {
+                        event.preventDefault();
+                    }
+                });
+            }
+        }
+    })(window, document);
+</script>{% endblock javascripts %}

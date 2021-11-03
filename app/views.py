@@ -17,10 +17,14 @@ def index(request):
 @login_required(login_url="/login/")
 def cadastro_setores(request):
         data = {}
-        data['form'] = Form_cad_setores
         data['db'] = Cad_setores.objects.all()
         return render(request,"cadastro-setores.html",data)
 
+@login_required(login_url="/login/")
+def cadastrar_setor(request):
+    data = {}
+    data['form'] = Form_cad_setores
+    return render(request,"cadastrar-setor.html",data)
 
 @login_required(login_url="/login/")
 def cadastro_equipes(request):
@@ -50,12 +54,12 @@ def cadastro_empresa(request):
     data['db'] = Cad_empresa.objects.all()
     return render(request,"cadastro-empresa.html",data)
 
-@login_required(login_url="/login/")
-def create(request):
-    form = Form_cad_empresa(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('cadastro_empresa')
+#@login_required(login_url="/login/")
+#def create(request):
+#    form = Form_cad_empresa(request.POST or None)
+#    if form.is_valid():
+#        form.save()
+#        return redirect('cadastro_empresa')
     
 @login_required(login_url="/login/")
 def dados_previos(request):
@@ -98,6 +102,7 @@ def documentos(request):
     #data['form'] = Form_documentos
     #data['db'] = Cad_Mapeamento.objects.all()
     return render(request,"documentos.html")
+    
 
 @login_required(login_url="/login/")
 def treinamento(request):
@@ -105,3 +110,32 @@ def treinamento(request):
     #data['form'] = Form_documentos
     #data['db'] = Cad_Mapeamento.objects.all()
     return render(request,"treinamento.html")
+
+@login_required(login_url="/login/")
+def create(request):
+    form = Form_cad_setores(request.POST or None)
+    if form.is_valid():
+        form.save()
+    return redirect('cadastro_setores')
+
+@login_required(login_url="/login/")
+def edit(request,pk):
+    data = {}
+    data['db'] = Cad_setores.objects.get(pk=pk)
+    data['form'] = Form_cad_setores(instance=data['db'])
+    return render(request,'cadastrar-setor.html',data)
+
+@login_required(login_url="/login/")
+def update(request,pk):
+    data = {}
+    data['db'] = Cad_setores.objects.get(pk=pk)
+    form = Form_cad_setores(request.POST or None,instance=data['db'])
+    if form.is_valid():
+        form.save()
+        return redirect('cadastro_setores')
+
+@login_required(login_url="/login/")
+def delete(request,pk):
+    db = Cad_setores.objects.get(pk=pk)
+    db.delete()
+    return redirect('cadastro_setores')
