@@ -17,11 +17,11 @@ PROJECT_DIR = Path(__file__).parent
 SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False)
-
+#DEBUG = config('DEBUG', default=False)
+DEGUG = False
 
 # load production server from .env
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1'),'gabrielranulfo.pythonanywhere.com',]
 
 # Application definition
 
@@ -83,6 +83,13 @@ DATABASES = {
     }
 }
 
+# sqliteversion
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME':'db',
+#        }
+#    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -123,8 +130,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_URL = '/static/'
+
+#deploy
 STATIC_URL = '/static/'
+#STATIC_ROOT = "/home/gabrielranulfo/projeto-integrador/staticfiles"
+STATIC_ROOT = "/home/gabriel/dev/Python/0 - Estudos/django/dash/projeto-integrador"
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
