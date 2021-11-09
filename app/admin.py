@@ -8,7 +8,8 @@ from django.contrib import admin
 
 # Register your models here.
 from django.contrib import admin
-from app.models import Cad_Mapeamento, Cad_empresa, Cad_equipes,Cad_setores,Cad_fornecedores,Cad_dpo,Cad_dados_previos,Cad_itens_auditaveis,Cad_fator_de_risco
+#from app.models import Cad_Mapeamento, Cad_empresa, Cad_equipes,Cad_setores,Cad_fornecedores,Cad_dpo,Cad_dados_previos,Cad_itens_auditaveis,Cad_fator_de_risco
+from app.models import *
 
 
 admin.site.register(Cad_empresa)

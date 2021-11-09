@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %} {% block title %} Cadastro {% endblock %} {% block content %} {% load widget_tweaks%}
+<div class="my-3 my-md-5">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">
+                Informações da Equipe
+            </h1>
+        </div>
+        <form name="form" id="form" action="{% if db %}/update_equipe/{{db.id}}/{%else%}/create_equipe/{% endif %}" method="post">
+            <fieldset class="form-fieldset ">
+                {% csrf_token %}
+                <div class=" form-group ">
+                    <label class="form-label ">Nome da Equipe<span class="form-required ">*</span></label>{% render_field form.nome class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Telefone<span class="form-required ">*</span></label>{% render_field form.telefone class="form-control" type="text" %}
+                </div>
+
+                <div class="form-group ">
+                    <label class="form-label ">Responsabilidade<span class="form-required ">*</span></label>{% render_field form.responsabilidade class="form-control " type="text " %}
+                </div>
+
+                <div class="form-group mb-0 text-right ">
+                    <a type="button" class="btn btn-dark" href="/cadastro_equipes">Voltar</a>
+                    <input type="submit" class="btn btn-primary " value="Salvar">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+
+
+{% block javascripts %}{% endblock javascripts %}

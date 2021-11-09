@@ -5,29 +5,45 @@
                 <img src="/static/assets/demo/brand/logo-univesp.png" class="header-brand-img" alt="tabler logo">
             </a>
             <div class="d-flex order-lg-2 ml-auto">
+                <div class="nav-item d-none d-md-flex">
+                    <!--<a href="https://github.com/app-generator/django-dashboard-tabler" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>-->
+                </div>
+                <div class="dropdown d-none d-md-flex">
+
+                </div>
                 <div class="dropdown">
                     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                        <span class="avatar" style="background-image: url(/static/assets/demo/faces/female/25.jpg)"></span>
+                        <span class="avatar" style="background-image: url(/static/assets/demo/faces/default-user.png)"></span>
                         <span class="ml-2 d-none d-lg-block">
-                            <span class="text-default">
-                                {{ current_user.username }}
-                            </span>
+                                <span class="text-default">
+                                    {{ current_user.username }}
+                                </span>
                         <small class="text-muted d-block mt-1">
-                                {{ current_user.email }}
-                            </small>
+                                    {{ current_user.email }}
+                                </small>
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <!--<a class="dropdown-item" href="/page-profile.html">
+                            <i class="dropdown-icon fe fe-user"></i> Profile
+                        </a>
+                        <a class="dropdown-item" href="/page-email.html">
+                            <span class="float-right"><span class="badge badge-primary">6</span></span>
+                            <i class="dropdown-icon fe fe-mail"></i> Inbox
+                        </a>-->
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="https://projetointegr-p6e3550.slack.com/">
                             <i class="dropdown-icon fe fe-help-circle"></i> Suporte
                         </a>
                         <a class="dropdown-item" href={% url 'logout' %}>
-                            <i class="dropdown-icon fe fe-log-out"></i> Sair
+                            <i class="dropdown-icon fe fe-log-out"></i>Sair
                         </a>
                     </div>
                 </div>
-
             </div>
+            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                <span class="header-toggler-icon"></span>
+            </a>
         </div>
     </div>
+</div>

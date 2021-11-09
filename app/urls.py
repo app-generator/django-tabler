@@ -5,26 +5,47 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.urls import path
-from app.views import index,cadastro_setores,cadastrar_setor,cadastro_equipes,cadastro_fornecedores,cadastro_dpo,cadastro_empresa,create, dados_previos, itens_auditaveis,fator_de_risco,mapeamento,documentos,treinamento,relatorio,edit,update,delete
-
+#from app.views import create_setor, index,cadastro_equipes,cadastro_fornecedores,cadastro_empresa,dados_previos, itens_auditaveis,fator_de_risco,mapeamento,documentos,treinamento,relatorio,cadastro_setores,cadastrar_setor,edit_setor,update_setor,delete_setor,cadastrar_equipe,create_equipe,edit_equipe,update_equipe,delete_equipe,cadastro_dpo,cadastrar_dpo,create_dpo,edit_dpo,update_dpo,delete_dpo
+from app.views import *
 urlpatterns = [
     # The home page
     path('', index, name='home'),
-    path('cadastro_setores/',cadastro_setores, name='cadastro_setores'),
-    path('cadastrar_setor/',cadastrar_setor, name='cadastrar_setor'),
-    path('cadastro_equipes/',cadastro_equipes, name='cadastro_equipes'),
-    path('cadastro_fornecedores/',cadastro_fornecedores, name='cadastro_fornecedores'),
-    path('cadastro_dpo/',cadastro_dpo, name='cadastro_dpo'),
-    path('cadastro_empresa/',cadastro_empresa, name='cadastro_empresa'),
     path('dados_previos/',dados_previos, name='dados_previos'),
     path('itens_auditaveis/',itens_auditaveis, name='itens_auditaveis'),
-    path('fator_de_risco/',fator_de_risco, name='fator_de_risco'),
+    #path('fator_de_risco/',fator_de_risco, name='fator_de_risco'),
     path('relatorio/',relatorio, name='relatorio'),
     path('mapeamento/',mapeamento, name='mapeamento'),
     path('documentos/',documentos, name='documentos'),
     path('treinamento/',treinamento, name='treinamento'),
-    path('create/',create, name='create'),    
-    path('edit/<int:pk>/',edit, name='edit'),
-    path('update/<int:pk>/',update, name='update'),
-    path('delete/<int:pk>/',delete, name='delete'),
+    # Setores
+    path('cadastro_setores/',cadastro_setores, name='cadastro_setores'),
+    path('cadastrar_setor/',cadastrar_setor, name='cadastrar_setor'),
+    path('create_setor/',create_setor, name='create_setor'),    
+    path('edit_setor/<int:pk>/',edit_setor, name='edit_setor'),
+    path('update_setor/<int:pk>/',update_setor, name='update_setor'),
+    path('delete_setor/<int:pk>/',delete_setor, name='delete_setor'),
+    #Equipes
+    path('cadastro_equipes/',cadastro_equipes, name='cadastro_equipes'),
+    path('cadastrar_equipe/',cadastrar_equipe, name='cadastrar_equipe'),
+    path('create_equipe/',create_equipe, name='create_equipe'),    
+    path('edit_equipe/<int:pk>/',edit_equipe, name='edit_equipe'),
+    path('update_equipe/<int:pk>/',update_equipe, name='update_equipe'),
+    path('delete_equipe/<int:pk>/',delete_equipe, name='delete_equipe'),
+    # DPO
+    path('cadastro_dpo/',cadastro_dpo, name='cadastro_dpo'),
+    path('cadastrar_dpo/',cadastrar_dpo, name='cadastrar_dpo'),
+    path('create_dpo/',create_dpo, name='create_dpo'),    
+    path('edit_dpo/<int:pk>/',edit_dpo, name='edit_dpo'),
+    path('update_dpo/<int:pk>/',update_dpo, name='update_dpo'),
+    path('delete_dpo/<int:pk>/',delete_dpo, name='delete_dpo'),
+    # Cadastro da Empresa
+    path('cadastro_empresa/',cadastro_empresa, name='cadastro_empresa'),
+    # Cadastro de Fornecedores
+    path('cadastro_fornecedores/',cadastro_fornecedores, name='cadastro_fornecedores'),
+    path('cadastrar_fornecedores/',cadastrar_fornecedores, name='cadastrar_fornecedores'),
+    path('create_fornecedores/',create_fornecedores, name='create_fornecedores'),    
+    path('edit_fornecedores/<int:pk>/',edit_fornecedores, name='edit_fornecedores'),
+    path('update_fornecedores/<int:pk>/',update_fornecedores, name='update_fornecedores'),
+    path('delete_fornecedores/<int:pk>/',delete_fornecedores, name='delete_fornecedores'),
+    
 ]

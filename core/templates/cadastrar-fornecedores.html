@@ -3,30 +3,30 @@
     <div class="container">
         <div class="page-header">
             <h1 class="page-title">
-                Informações do Setor
+                Informações do Fornecedor
             </h1>
         </div>
-        <form name="form" id="form" action="{% if db%}/update_setor/{{db.id}}/{%else%}/create_setor/{% endif %}" method="post">
+        <form name="form" id="form" action="{% if db %}/update_fornecedores/{{db.id}}/{%else%}/create_fornecedores/{% endif %}" method="post">
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
                 <div class=" form-group ">
-                    <label class="form-label ">Nome do Setor<span class="form-required ">*</span></label>{% render_field form.setor_nome class="form-control" type="text" %}
+                    <label class="form-label ">Fornecedor<span class="form-required ">*</span></label>{% render_field form.fornecedor class="form-control" type="text" %}
                 </div>
 
                 <div class=" form-group ">
-                    <label class="form-label ">Responsável<span class="form-required ">*</span></label>{% render_field form.resposavel_setor class="form-control" type="text" %}
+                    <label class="form-label ">CNPJ<span class="form-required ">*</span></label>{% render_field form.cnpj class="form-control" type="text" %}
                 </div>
 
                 <div class="form-group ">
-                    <label class="form-label ">Cargo<span class="form-required ">*</span></label>{% render_field form.cargo_setor class="form-control " type="text " %}
+                    <label class="form-label ">DPO<span class="form-required ">*</span></label>{% render_field form.dpo class="form-control " type="text " %}
                 </div>
 
                 <div class="form-group ">
-                    <label class="form-label ">Contato<span class="form-required ">*</span></label>{% render_field form.contato_setor class="form-control " type="text " %}
+                    <label class="form-label ">Telefone<span class="form-required ">*</span></label>{% render_field form.telefone class="form-control " type="text " %}
                 </div>
 
                 <div class="form-group mb-0 text-right ">
-                    <a type="button" class="btn btn-dark" href="/cadastro_setores">Voltar</a>
+                    <a type="button" class="btn btn-dark" href="/cadastro_fornecedores">Voltar</a>
                     <input type="submit" class="btn btn-primary " value="Salvar">
                 </div>
             </fieldset>

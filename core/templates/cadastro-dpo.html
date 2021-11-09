@@ -8,7 +8,10 @@
                 Informações do DPO
             </h1>
         </div>
-        <form name="form" id="form" action="/create/" method="post">
+        <div class="col-8 m-auto pt-3 pb-2 text-center">
+            <a href="/cadastrar_dpo" class="btn btn-success">Adicionar</a>
+        </div>
+        <form name="form" id="form" action="/create_dpo/" method="post">
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
                 <div class="table-responsive">
@@ -25,6 +28,7 @@
                                 <th scope="col">Endereço</th>
                                 <th scope="col">Cidade</th>
                                 <th scope="col">Estado</th>
+                                <th scope="col">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,19 +44,14 @@
                                 <td>{{dbs.endereco}}</td>
                                 <td>{{dbs.cidade}}</td>
                                 <td>{{dbs.estado}}</td>
+                                <td>
+                                    <a href="/edit_dpo/{{dbs.id}}/" class="btn btn-dark ">Editar</a>
+                                    <a href="/delete_dpo/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
             </fieldset>
             </div>
         </form>
@@ -61,4 +60,5 @@
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %} {% load static %}
+<script src="{% static 'assets/js/javascript.js' %}"></script>{% endblock javascripts %}

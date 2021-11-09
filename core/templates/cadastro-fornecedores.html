@@ -8,7 +8,10 @@
                 Cadastro de Fornecedores
             </h1>
         </div>
-        <form name="form" id="form" action="/create/" method="post">
+        <div class="col-8 m-auto pt-3 pb-2 text-center">
+            <a href="/cadastrar_fornecedores" class="btn btn-success">Adicionar</a>
+        </div>
+        <form name="form" id="form" action="/create_fornecedores/" method="post">
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
                 <div class="table-responsive">
@@ -21,6 +24,7 @@
                                 <th scope="col">CNPJ</th>
                                 <th scope="col">DPO</th>
                                 <th scope="col">Telefone</th>
+                                <th scope="col">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,19 +35,14 @@
                                 <td>{{dbs.cnpj}}</td>
                                 <td>{{dbs.dpo}}</td>
                                 <td>{{dbs.telefone}}</td>
+                                <td>
+                                    <a href="/edit_fornecedores/{{dbs.id}}/" class="btn btn-dark ">Editar</a>
+                                    <a href="/delete_fornecedores/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
             </fieldset>
             </div>
         </form>
@@ -53,4 +52,5 @@
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %} {% load static %}
+<script src="{% static 'assets/js/javascript.js' %}"></script>{% endblock javascripts %}

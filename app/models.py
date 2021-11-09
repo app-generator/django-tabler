@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.db import models
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 
 
 class Cad_empresa(models.Model):
@@ -54,11 +54,17 @@ class Cad_itens_auditaveis(models.Model):
     il = models.IntegerField()
     icn = models.IntegerField()
     e = models.IntegerField()
+    fr = models.IntegerField()
 
+    @property
+    def fr(self):
+        return (self.il ** 2 + self.icn ** 2)*((7-self.e) ** 2) 
+
+    
 class Cad_fator_de_risco(models.Model):
-    #questao_id = models.ForeignKey(Cad_itens_auditaveis.pk)
     questao_fator_de_risco = models.CharField(max_length=90)
     fator_de_risco = models.IntegerField()
+    ##CALCULO DO FATOR DE RISCO fr = (il ** 2 + icn ** 2)*((7-e) ** 2) 
 
 class Cad_Mapeamento(models.Model):
     dado = models.CharField(max_length=30)

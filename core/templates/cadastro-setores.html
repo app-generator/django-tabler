@@ -10,7 +10,7 @@
         <div class="col-8 m-auto pt-3 pb-2 text-center">
             <a href="/cadastrar_setor" class="btn btn-success">Adicionar</a>
         </div>
-        <form name="form" id="form" action="/create/" method="post">
+        <form name="form" id="form" action="/create_setor/" method="post">
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
                 <div class="table-responsive">
@@ -35,10 +35,9 @@
                                 <td>{{dbs.cargo_setor}}</td>
                                 <td>
 
-                                    <a href="/edit/{{dbs.id}}/" class="btn btn-dark ">Editar</a>
-                                    <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                                    <a href="/edit_setor/{{dbs.id}}/" class="btn btn-dark ">Editar</a>
+                                    <a href="/delete_setor/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
                                 </td>
-
                             </tr>
                             {% endfor %}
                         </tbody>

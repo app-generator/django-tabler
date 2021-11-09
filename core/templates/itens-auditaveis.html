@@ -22,16 +22,18 @@
                                 <th scope="col">IL</th>
                                 <th scope="col">ICN</th>
                                 <th scope="col">E</th>
+                                <th scope="col">FR</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for dbs in db %}
                             <tr>
-                                <th scope="row">1</th>
-                                <td>{{dbs.questao}}</td>
+                                <th scope="row">{{dbs.id}}</th>
+                                <td>{{dbs.questao_itens_auditaveis }}</td>
                                 <td>{{dbs.il}}</td>
                                 <td>{{dbs.icn}}</td>
                                 <td>{{dbs.e}}</td>
+                                <td>{{dbs.fr}}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
