@@ -1,4 +1,6 @@
 # [Projeto Integrador | UNIVESP]
+[![wakatime](https://wakatime.com/badge/user/939444ec-3797-43ff-bb09-6e41081ae12c/project/e8db03da-9254-412f-a189-1558e706d0d7.svg)](https://wakatime.com/badge/user/939444ec-3797-43ff-bb09-6e41081ae12c/project/e8db03da-9254-412f-a189-1558e706d0d7)
+
 
 Este é um dashboard desenvolvido em **Django** e baseado no Tabler um template open source criado pela agência Codecalm.
 
