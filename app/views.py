@@ -30,14 +30,6 @@ def cadastro_empresa(request):
 #    if form.is_valid():
 #        form.save()
 #        return redirect('cadastro_empresa')
-    
-
-@login_required(login_url="/login/")
-def itens_auditaveis(request):
-    data = {}
-    data['form'] = Form_itens_auditaveis
-    data['db'] = Cad_itens_auditaveis.objects.all() 
-    return render(request,"itens-auditaveis.html",data)
 
 @login_required(login_url="/login/")
 def fator_de_risco(request):
@@ -272,3 +264,28 @@ def create_dados_previos(request):
     if form.is_valid():
         form.save()
     return redirect('dados_previos')
+  
+@login_required(login_url="/login/")
+def itens_auditaveis(request):
+    data = {}
+    data['form'] = Form_itens_auditaveis
+    data['db'] = Cad_itens_auditaveis.objects.all() 
+    return render(request,"itens-auditaveis.html",data)
+
+@login_required(login_url="/login/")
+def edit_dados_previos(request,pk):
+    data = {}
+    data['db'] = Cad_dados_previos.objects.get(pk=pk)
+    data['form'] = Form_dados_previos(instance=data['db'])
+    return render(request,'cadastro-dados-previos.html',data)
+
+@login_required(login_url="/login/")
+def update_dados_previos(request,pk):
+    data = {}
+    data['db'] = Cad_dados_previos.objects.get(pk=pk)
+    form = Form_dados_previos(request.POST or None,instance=data['db'])
+    if form.is_valid():
+        form.save()
+    else:
+        print("erro")
+    return redirect('/dados_previos/')

@@ -10,7 +10,6 @@ from app.views import *
 urlpatterns = [
     # The home page
     path('', index, name='home'),
-    path('itens_auditaveis/',itens_auditaveis, name='itens_auditaveis'),
     #path('fator_de_risco/',fator_de_risco, name='fator_de_risco'),
     path('relatorio/',relatorio, name='relatorio'),
     path('mapeamento/',mapeamento, name='mapeamento'),
@@ -51,4 +50,6 @@ urlpatterns = [
     path('edit_dados_previos/<int:pk>/',edit_dados_previos, name='edit_dados_previos'),
     path('update_dados_previos/<int:pk>/',update_dados_previos, name='update_dados_previos'),
     path('create_dados_previos/',create_dados_previos, name='create_dados_previos'),
+    # Itens Auditáveis
+    path('itens_auditaveis/',itens_auditaveis, name='itens_auditaveis'),
 ]
