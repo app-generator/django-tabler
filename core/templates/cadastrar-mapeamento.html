@@ -1,0 +1,81 @@
+{% extends "layouts/base.html" %} {% block title %} Cadastro {% endblock %} {% block content %} {% load widget_tweaks%}
+<div class="my-3 my-md-5">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">
+                Dado para Mapeamento
+            </h1>
+        </div>
+        <form name="form" id="form" action="{% if db %}/update_mapeamento/{{db.id}}/{%else%}/create_mapeamento/{% endif %}" method="post">
+            <fieldset class="form-fieldset ">
+                {% csrf_token %}
+
+                <div class=" form-group ">
+                    <label class="form-label ">Dado<span class="form-required ">*</span></label>{% render_field form.dado class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Tipo<span class="form-required ">*</span></label>{% render_field form.tipo class="form-control" type="text" %}
+                </div>
+
+
+
+                <div class=" form-group ">
+                    <label class="form-label ">Fonte<span class="form-required ">*</span></label>{% render_field form.fonte class="form-control" type="text" %}
+                </div>
+
+                <div class="tipo form-group ">
+                    <label class="form-label ">Motivo<span class="form-required ">*</span></label>{% render_field form.motivo class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Base Legal<span class="form-required ">*</span></label>{% render_field form.base_legal class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Tratamento<span class="form-required ">*</span></label>{% render_field form.tratamento class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Eliminacação<span class="form-required ">*</span></label>{% render_field form.eliminacao class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Compartilhamento<span class="form-required ">*</span></label>{% render_field form.compartilhamento class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Necessário Consentimento<span class="form-required ">*</span></label>{% render_field form.necessario_consentimento class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Possui Consentimento<span class="form-required ">*</span></label>{% render_field form.possui_consentimento class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Menor de Idade ?<span class="form-required ">*</span></label>{% render_field form.menor class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Impacto Pessoal<span class="form-required ">*</span></label>{% render_field form.impacto_pessoal class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Missão Critica<span class="form-required ">*</span></label>{% render_field form.missao_critica class="form-control" type="text" %}
+                </div>
+
+                <div class="form-group mb-0 text-right ">
+                    <a type="button" class="btn btn-dark" href="/mapeamento">Voltar</a>
+                    <input type="submit" class="btn btn-primary " value="Salvar">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+
+
+{% block javascripts %}{% endblock javascripts %}

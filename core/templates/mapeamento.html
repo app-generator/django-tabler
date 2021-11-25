@@ -9,6 +9,11 @@
                 Mapeamento
             </h1>
         </div>
+
+        <div class="col-8 m-auto pt-3 pb-2 text-center">
+            <a href="/cadastrar_mapeamento" class="btn btn-success">Adicionar</a>
+        </div>
+
         <form name="form" id="form" action="/create/" method="post">
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
@@ -22,30 +27,25 @@
                                 <th scope="col">Tipo</th>
                                 <th scope="col">Fonte</th>
                                 <th scope="col">Base Legal</th>
+                                <th scope="col">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for dbs in db %}
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">{{dbs.id}}</th>
                                 <td>{{dbs.dado}}</td>
                                 <td>{{dbs.tipo}}</td>
                                 <td>{{dbs.fonte}}</td>
                                 <td>{{dbs.base_legal}}</td>
+                                <td>
+                                    <a href="/edit_mapeamento/{{dbs.id}}/" class="btn btn-dark ">Editar</a>
+                                    <a href="/delete_mapeamento/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
-
             </fieldset>
             </div>
         </form>

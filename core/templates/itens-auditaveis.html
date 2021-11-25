@@ -9,7 +9,7 @@
                 Itens Auditáveis
             </h1>
         </div>
-        <form name="form" id="form" action="/create/" method="post">
+        <form name="form" id="form" method="post">
             <fieldset class="form-fieldset ">
                 {% csrf_token %}
                 <div class="table-responsive">
@@ -37,7 +37,7 @@
                                 <td>{{dbs.e}}</td>
                                 <td>{{dbs.fr}}</td>
                                 <td>
-                                    <a href="/edit_dados_previos/{{dbs.id}}/" class="btn btn-outline-dark w-30 ">Editar</a>
+                                    <a href="/edit_itens_auditaveis/{{dbs.id}}/" class="btn btn-outline-dark w-30 ">Editar</a>
                                 </td>
                             </tr>
                             {% endfor %}

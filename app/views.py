@@ -6,11 +6,8 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-#from app.forms import Form_cad_empresa, Form_cad_equipes, Form_cad_fornecedores,Form_cad_setores,Form_cad_dpo,Form_dados_previos,Form_fator_de_risco,Form_itens_auditaveis,Form_mapeamento
-#from app.models import Cad_dados_previos, Cad_empresa, Cad_equipes, Cad_fator_de_risco, Cad_fornecedores, Cad_setores,Cad_itens_auditaveis,Cad_Mapeamento,Cad_dpo
 from app.forms import *
 from app.models import *
-#from app.forms import Form_cad_dpo as dpo
 
 @login_required(login_url="/login/")
 def index(request):
@@ -24,12 +21,6 @@ def cadastro_empresa(request):
     data['db'] = Cad_empresa.objects.all()
     return render(request,"cadastro-empresa.html",data)
 
-#@login_required(login_url="/login/")
-#def create(request):
-#    form = Form_cad_empresa(request.POST or None)
-#    if form.is_valid():
-#        form.save()
-#        return redirect('cadastro_empresa')
 
 @login_required(login_url="/login/")
 def fator_de_risco(request):
@@ -41,13 +32,6 @@ def fator_de_risco(request):
 @login_required(login_url="/login/")
 def relatorio(request):
     return render(request,"relatorio.html")
-
-@login_required(login_url="/login/")
-def mapeamento(request):
-    data = {}
-    data['form'] = Form_mapeamento
-    data['db'] = Cad_Mapeamento.objects.all()
-    return render(request,"mapeamento.html",data)
 
 @login_required(login_url="/login/")
 def documentos(request):
@@ -257,7 +241,6 @@ def update_dados_previos(request,pk):
     else:
         print("erro")
     return redirect('/dados_previos/')
-
 @login_required(login_url="/login/")
 def create_dados_previos(request):
     form = Form_dados_previos(request.POST or None)
@@ -273,19 +256,68 @@ def itens_auditaveis(request):
     return render(request,"itens-auditaveis.html",data)
 
 @login_required(login_url="/login/")
-def edit_dados_previos(request,pk):
+def edit_itens_auditaveis(request,pk):
     data = {}
-    data['db'] = Cad_dados_previos.objects.get(pk=pk)
-    data['form'] = Form_dados_previos(instance=data['db'])
-    return render(request,'cadastro-dados-previos.html',data)
+    data['db'] = Cad_itens_auditaveis.objects.get(pk=pk)
+    data['form'] = Form_itens_auditaveis(instance=data['db'])
+    return render(request,'edit-itens-auditaveis.html',data)
 
 @login_required(login_url="/login/")
-def update_dados_previos(request,pk):
+def update_itens_auditaveis(request,pk):
     data = {}
-    data['db'] = Cad_dados_previos.objects.get(pk=pk)
-    form = Form_dados_previos(request.POST or None,instance=data['db'])
+    data['db'] = Cad_itens_auditaveis.objects.get(pk=pk)
+    form = Form_itens_auditaveis(request.POST or None,instance=data['db'])
     if form.is_valid():
         form.save()
     else:
         print("erro")
-    return redirect('/dados_previos/')
+    return redirect("itens_auditaveis")
+
+@login_required(login_url="/login/")
+def create_itens_auditaveis(request):
+    form = Form_itens_auditaveis(request.POST or None)
+    if form.is_valid():
+        form.save()
+    return redirect('itens_auditaveis')
+
+@login_required(login_url="/login/")
+def mapeamento(request):
+    data = {}
+    data['form'] = Form_mapeamento
+    data['db'] = Cad_Mapeamento.objects.all()
+    return render(request,"mapeamento.html",data)
+
+@login_required(login_url="/login/")
+def cadastrar_mapeamento(request):
+    data = {}
+    data['form'] = Form_mapeamento
+    return render(request,"cadastrar-mapeamento.html",data)
+
+@login_required(login_url="/login/")
+def create_mapeamento(request):
+    form = Form_mapeamento(request.POST or None)
+    if form.is_valid():
+        form.save()
+    return redirect('mapeamento')
+
+@login_required(login_url="/login/")
+def edit_mapeamento(request,pk):
+    data = {}
+    data['db'] = Cad_Mapeamento.objects.get(pk=pk)
+    data['form'] = Form_mapeamento(instance=data['db'])
+    return render(request,'cadastrar-mapeamento.html',data)
+
+@login_required(login_url="/login/")
+def update_mapeamento(request,pk):
+    data = {}
+    data['db'] = Cad_Mapeamento.objects.get(pk=pk)
+    form = Form_mapeamento(request.POST or None,instance=data['db'])
+    if form.is_valid():
+        form.save()
+        return redirect('mapeamento')
+
+@login_required(login_url="/login/")
+def delete_mapeamento(request,pk):
+    db = Cad_Mapeamento.objects.get(pk=pk)
+    db.delete()
+    return redirect('mapeamento')

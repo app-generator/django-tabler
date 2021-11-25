@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %} {% block title %} Editar Itens Auditáveis {% endblock %} {% block content %} {% load widget_tweaks%}
+<div class="my-3 my-md-5">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">
+                Itens Auditáveis
+            </h1>
+        </div>
+        <form name="form" id="form" action="{% if db %}/update_itens_auditaveis/{{db.id}}/{%else%}/create_itens_auditaveis/{% endif %}" method="post">
+            <fieldset class="form-fieldset ">
+                {% csrf_token %}
+                <div class=" form-group ">
+                    <label class="form-label ">Questão<span class="form-required ">*</span></label>{% render_field form.questao_itens_auditaveis class="form-control" type="text" %}
+                </div>
+
+                <div class=" form-group ">
+                    <label class="form-label ">Índice para a LGPD<span class="form-required ">*</span></label>{% render_field form.il class="form-control" type="text" %}
+                </div>
+
+                <div class="form-group ">
+                    <label class="form-label ">Índice de Continuidade do Negócio<span class="form-required ">*</span></label>{% render_field form.icn class="form-control " type="text " %}
+                </div>
+
+                <div class="form-group ">
+                    <label class="form-label ">Evidência<span class="form-required ">*</span></label>{% render_field form.e class="form-control " type="text " %}
+                </div>
+
+                <div class="form-group mb-0 text-right ">
+                    <a type="button" class="btn btn-dark" href="/itens_auditaveis">Voltar</a>
+                    <input type="submit" class="btn btn-primary " value="Salvar">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+
+
+{% block javascripts %}{% endblock javascripts %}
