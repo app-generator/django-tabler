@@ -1,0 +1,230 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Blog {% endblock %} 
+
+{% block content %}
+
+    <div class="my-3 my-md-5">
+        <div class="container">
+          <div class="page-header">
+            <h1 class="page-title">
+              Blog components
+            </h1>
+          </div>
+          <div class="row row-cards row-deck">
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#"><img class="card-img-top" src="/static/assets/demo/photos/david-klaasen-54203-500.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">And this isn't my nose. This is a false one.</a></h4>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/female/18.jpg)"></div>
+                    <div>
+                      <a href="/page-profile.html" class="text-default">
+                        {{ request.user.username }}
+                      </a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#"><img class="card-img-top" src="/static/assets/demo/photos/david-marcu-114194-500.jpg" alt="Well, I didn&#39;t vote for you."></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">Well, I didn't vote for you.</a></h4>
+                  <div class="text-muted">Well, we did do the nose. Why? Shut up! Will you shut up?! You don't frighten us, English pig-dog...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/male/16.jpg)"></div>
+                    <div>
+                      <a href="#" class="text-default">Peter Richards</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#"><img class="card-img-top" src="/static/assets/demo/photos/davide-cantelli-139887-500.jpg" alt="How do you know she is a witch?"></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">How do you know she is a witch?</a></h4>
+                  <div class="text-muted">Are you suggesting that coconuts migrate? No, no, no! Yes, yes. A bit. But she's got a wart. You ...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/male/26.jpg)"></div>
+                    <div>
+                      <a href="#" class="text-default">Wayne Holland</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#"><img class="card-img-top" src="/static/assets/demo/photos/dino-reichmuth-84359-500.jpg" alt="Shut up!"></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">Shut up!</a></h4>
+                  <div class="text-muted">Burn her! How do you know she is a witch? You don't frighten us, English pig-dogs! Go and boil yo...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/female/7.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Michelle Ross</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">Weaseling out of things is important to learn.</a></h4>
+                  <div class="text-muted">Please do not offer my god a peanut. That's why I love elementary school, Edna. The children beli...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/male/4.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Bobby Knight</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">You don't like your job, you don't strike.</a></h4>
+                  <div class="text-muted">But, Aquaman, you cannot marry a woman without gills. You're from two different worlds… Oh, I've ...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/male/35.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Craig Anderson</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">I hope I didn't brain my damage.</a></h4>
+                  <div class="text-muted">I don't like being outdoors, Smithers. For one thing, there's too many fat children. Oh, loneline...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/female/29.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Crystal Wallace</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">And this isn't my nose. This is a false one.</a></h4>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/female/18.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Rose Bradley</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-marcu-114194-500.jpg)"></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">Well, I didn't vote for you.</a></h4>
+                  <div class="text-muted">Well, we did do the nose. Why? Shut up! Will you shut up?! You don't frighten us, English pig-dog...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/male/16.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Peter Richards</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column w-50" style="background-image: url(/static/assets/demo/photos/grant-ritchie-338179-500.jpg)"></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">Weaseling out of things is important to learn.</a></h4>
+                  <div class="text-muted">Please do not offer my god a peanut. That's why I love elementary school, Edna. The children believe anything you tell them. Brace yourselves gentlemen. According to the gas chromatograph, the secr...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/male/4.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Bobby Knight</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column w-50" style="background-image: url(/static/assets/demo/photos/ilnur-kalimullin-218996-500.jpg)"></a>
+                <div class="card-body d-flex flex-column">
+                  <h4><a href="#">You don't like your job, you don't strike.</a></h4>
+                  <div class="text-muted">But, Aquaman, you cannot marry a woman without gills. You're from two different worlds… Oh, I've wasted my life. Son, when you participate in sporting events, it's not whether you win or lose: it's...</div>
+                  <div class="d-flex align-items-center pt-5 mt-auto">
+                    <div class="avatar avatar-md mr-3" style="background-image: url(/static/assets/demo/faces/male/35.jpg)"></div>
+                    <div>
+                      <a href="./profile.html" class="text-default">Craig Anderson</a>
+                      <small class="d-block text-muted">3 days ago</small>
+                    </div>
+                    <div class="ml-auto text-muted">
+                      <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

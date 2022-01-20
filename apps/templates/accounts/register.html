@@ -1,0 +1,110 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Register {% endblock %} 
+
+{% block content %}
+
+    <div class="row">
+      <div class="col col-login mx-auto">
+        <div class="text-center mb-6">
+          <img src="/static/assets/demo/brand/tabler.svg" class="h-6" alt="">
+        </div>
+        
+        {% if success %}
+
+          <div class="card-body p-6">
+            <div class="card-title text-center">
+
+              <p class="text-center">
+                User Created.
+                <br />
+                Please <strong><a href={% url 'login' %}>authenticate</a></strong> using the new account.
+              </p>  
+            
+            </div>
+          </div>    
+
+        {% else %}
+
+          <form class="card" action="" method="post">
+
+            {% csrf_token %}
+
+            <div class="card-body p-6">
+              <div class="card-title text-center">
+
+                {% if msg %}
+                  {{ msg | safe }}
+                {% else %}
+                  Add your credentials or <strong><a href={% url 'login' %} >authenticate</a></strong> with an existing account.
+                {% endif %}  
+                
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Username</label>
+                {{ form.username }}
+              </div>
+              <span class="text-danger">{{ form.username.errors }}</span>
+
+              <br />
+              
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                {{ form.email }}
+              </div>
+              <span class="text-danger">{{ form.email.errors }}</span>
+
+              <br />
+
+              <div class="form-group">
+                <label class="form-label">
+                  Password
+                </label>
+                {{ form.password1 }}
+              </div>
+              <span class="text-danger">{{ form.password1.errors }}</span>
+
+              <br />
+
+              <div class="form-group">
+                <label class="form-label">
+                  Password Check
+                </label>
+                {{ form.password2 }}
+              </div>
+              <span class="text-danger">{{ form.password2.errors }}</span>
+
+              <br />
+              
+              <div class="form-group">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" />
+                  <span class="custom-control-label">Agree the terms</span>
+                </label>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
+              </div>
+            </div>
+
+          </form>
+        
+        {% endif %}
+
+        <div class="text-center text-muted">
+          &copy; Codecalm - 
+          <a target="_blank" 
+            href="https://appseed.us/admin-dashboards/django-dashboard-tabler" >Django Dashboard Tabler</a>
+          <br />
+          Coded by <a target="_blank" href="https://appseed.us">AppSeed</a>
+        </div>
+
+      </div>
+    </div>
+        
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
