@@ -17,8 +17,8 @@ PROJECT_DIR = Path(__file__).parent
 SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False)
-#DEGUG = False
+#DEBUG = config('DEBUG', default=False)
+DEGUG = False
 
 # load production server from .env
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1'),'gabrielranulfo.pythonanywhere.com',]
@@ -74,14 +74,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # settings.py
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'OPTIONS': {
-#            'read_default_file': '/etc/mysql/my.cnf',
-#        },
-#    }
-#}
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/etc/mysql/my.cnf',
+        },
+    }
+}'''
 
 # sqliteversion
 DATABASES = {
@@ -138,6 +138,7 @@ STATIC_URL = '/static/'
 #STATIC_ROOT = "/home/gabrielranulfo/projeto-integrador/staticfiles"
 #STATIC_ROOT = "/home/gabriel/dev/Python/0 - Estudos/django/dash/projeto-integrador"
 STATIC_ROOT = r"/home/gabriel/Documentos/Faculdade/Projeto Integrador/PI II/projeto-integrador"
+
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'core/static'),
