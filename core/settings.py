@@ -74,22 +74,22 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # settings.py
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
-        },
-    }
-}
-
-# sqliteversion
 #DATABASES = {
 #    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME':'db',
-#        }
+#        'ENGINE': 'django.db.backends.mysql',
+#        'OPTIONS': {
+#            'read_default_file': '/etc/mysql/my.cnf',
+#        },
 #    }
+#}
+
+# sqliteversion
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME':'db',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -136,8 +136,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #deploy
 STATIC_URL = '/static/'
 #STATIC_ROOT = "/home/gabrielranulfo/projeto-integrador/staticfiles"
-STATIC_ROOT = "/home/gabriel/dev/Python/0 - Estudos/django/dash/projeto-integrador"
-
+#STATIC_ROOT = "/home/gabriel/dev/Python/0 - Estudos/django/dash/projeto-integrador"
+STATIC_ROOT = r"/home/gabriel/Documentos/Faculdade/Projeto Integrador/PI II/projeto-integrador"
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'core/static'),
