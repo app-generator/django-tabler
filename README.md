@@ -10,7 +10,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 > Features
 
 - ✅ `Up-to-date Dependencies`
-- ✅ `Design`: [Django Theme Tabler](https://github.com/app-generator/django-admin-tabler) 
+- ✅ `Design`: [Django Theme Tabler](https://github.com/app-generator/django-admin-tabler), UI Version `v1.0.0-beta19`
 - ✅ `Sections` covered by the design:
   - ✅ **Admin section** (reserved for superusers)
   - ✅ **Authentication**: `Django.contrib.AUTH`, Registration
