@@ -5,7 +5,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 - 👉 [Django Tabler](https://appseed.us/product/tabler/django/) - `Product page`
 - 👉 [Django tabler](https://django-tabler.onrender.com/) - `LIVE Demo`
   - ✅ [Dark-Mode](https://django-tabler.onrender.com/?theme=dark) `Ready`  
-- 🛒 **[Datta Able Django PRO](https://appseed.us/product/datta-able-pro/django/)** - `Premium Version`
+- 🛒 **[Volt Django PRO](https://appseed.us/product/volt-dashboard-pro/django/)** - `Premium Version`
 
 <br />
 
