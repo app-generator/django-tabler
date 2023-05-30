@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.3] 2023-05-30
+### Changes
+
+- Update DEMO: [Django Tabler](https://django-tabler.onrender.com/)
+  - Deployed on `Render`
+
 ## [1.0.2] 2023-05-29
 ### Changes
 
