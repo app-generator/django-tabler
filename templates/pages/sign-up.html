@@ -1,0 +1,58 @@
+{% extends 'layouts/base-auth.html' %}
+{% load static %}
+
+{% block title %}Sign up - {% endblock title %}
+
+{% block content %}
+
+  <div class="page page-center">
+    <div class="container container-tight py-4">
+      <div class="text-center mb-4">
+        <a href="{% url 'index' %}" class="navbar-brand navbar-brand-autodark"><img src="{% static 'static/logo.svg' %}" height="36" alt=""></a>
+      </div>
+      <form class="card card-md" method="post">
+        {% csrf_token %}
+        
+
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Create new account</h2>
+          {% for field in form %}
+          {% if not field.name in 'password1, password2' %}
+          <div class="mb-3">
+            <label class="form-label">{{ field.label }}</label>
+            {{ field }}
+            <span class="text-danger d-block my-2">{{ field.errors }}</span>
+          </div>
+          {% else %}
+          <div class="mb-3">
+            <label class="form-label">{{ field.label }}</label>
+            <div class="input-group input-group-flat">
+              {{ field }}
+              <span class="input-group-text">
+                <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+                </a>
+              </span>
+            </div>
+            <span class="text-danger d-block my-2">{{ field.errors }}</span>
+          </div>
+          {% endif %}
+          {% endfor %}
+          <div class="mb-3">
+            <label class="form-check">
+              <input type="checkbox" class="form-check-input"/>
+              <span class="form-check-label">Agree the <a href="{% url 'terms_service' %}" tabindex="-1">terms and policy</a>.</span>
+            </label>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary w-100">Create new account</button>
+          </div>
+        </div>
+      </form>
+      <div class="text-center text-muted mt-3">
+        Already have account? <a href="{% url 'login' %}" tabindex="-1">Sign in</a>
+      </div>
+    </div>
+  </div>
+  
+{% endblock content %}
