@@ -27,7 +27,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | ------------------------------------  | ------------------------------------                                                           | ------------------------------------|
 | ✓ [Product Page](https://appseed.us/product/tabler/django/)  | 🚀 [LIVE Demo](https://django-volt-dashboard-pro.onrender.com/) | **[Get in Touch ➡️](https://appseed.us/custom-development/)** |    
 
-![Django Tabler - Open-Source Starter crafted by AppSeed.](https://github.com/app-generator/dummy/assets/51070104/8e56d253-5196-4a8d-961c-bd6c2a01a6a7)
+![Django Dashboard Tabler](https://github.com/user-attachments/assets/f1fa943d-7e6c-4346-9734-281a8cd2e093)
 
 <br />
 
