@@ -8,7 +8,7 @@
 - 👉 [Django Tabler](https://app-generator.dev/product/tabler/django/) - `Product Page`
 - 👉 [Django Tabler Documentation](https://app-generator.dev/docs/products/django/tabler/index.html) - `Complete Information` and Support Links
   - [Getting Started with Django](https://app-generator.dev/docs/technologies/django/index.html) - a `comprehensive tutorial`
-  - `Configuration`: Install Tailwind/Flowbite, Prepare Environment, Setting up the Database 
+  - `Configuration`: Install Dependencies, Prepare Environment, Setting up the Database 
   - `Start with Docker`
   - `Manual Build`
   - `Start the project`
