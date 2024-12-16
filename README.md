@@ -16,13 +16,37 @@ The product is designed to deliver the best possible user experience with highly
  
 <br />
 
+### Customize with [Django App Generator - Tabler Design](https://app-generator.dev/tools/django-generator/tabler/)
+
+- Access the [App Generator](https://app-generator.dev/tools/django-generator/) page
+- Select **Tabler Dashboard** as the preferred design
+- (Optional) Design Database: edit models and fields
+- (Optional) Edit the fields for the extended user model
+- (Optional) Enable OAuth for GitHub
+- (Optional) Add Celery (async tasks)
+- (Optional) Enable Dynamic API Module
+- Docker Scripts
+- Render CI/Cd Scripts
+
+**The generated Django project is available as a ZIP Archive and also uploaded to GitHub.**
+
+<br />
+
+## Deploy on `Render` (free plan)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+<br /> 
+
 ## Features
 
-- **Django 4.1.12**
-- Best Practices
-- [Tabler](https://app-generator.dev/docs/templates/bootstrap/tabler.html) - Full Integration 
-- `CI/CD` Flow via Render 
-- `Docker`
+- Simple, Easy-to-Extend Codebase
+- Tabler Design - Full Integration 
+- Bootstrap 5 Styling 
+- Session-based Authentication, Password recovery
+- DB Persistence: SQLite (default), can be used with MySql, PgSql
+- Docker 
+- CI/CD integration for Render 
 
 ![Django Dashboard Tabler - Open-Source ](https://github.com/user-attachments/assets/f1fa943d-7e6c-4346-9734-281a8cd2e093)
 
